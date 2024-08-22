@@ -1,0 +1,83 @@
+.contact-us {
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('/assets/social media icons/location background.jpg');
+    background-size: cover; /* Ensure the background image covers the entire container */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .logo-container {
+    width: 24px; /* Adjust the width as needed */
+    height: auto; /* Keep the aspect ratio */
+    vertical-align: middle; /* Align with the text */
+    margin-left: 5px; /* Optional: add some spacing from the text */
+  }
+  .location-section {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between text and map */
+    flex-wrap: wrap; /* Wraps content for smaller screens */
+  }
+  .location-details {
+    flex: 1;
+  }
+  .map-container {
+    flex: 1;
+    min-width: 100px;
+    margin-bottom: 80px; /* Ensures map has a minimum width */
+  }
+  .Email-logo {
+    width: 24px; /* Adjust the size as needed */
+    height: auto; /* Maintain the aspect ratio */
+    vertical-align: middle; /* Align the icon vertically with the text */
+    margin-right: 5px; /* Add some space between the icon and the text */
+  }
+  .flag-icon {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  .call-container {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  /* Make text inside <p> tags bold */
+  .contact-us p {
+    font-weight: bold;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .contact-info {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .location-section {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  
+    .map-container {
+      min-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .logo-container, .Email-logo, .flag-icon, .call-container {
+      width: 20px; /* Reduce icon sizes for smaller screens */
+    }
+  
+    .contact-us p {
+      font-size: 16px; /* Adjust font size for better readability on smaller screens */
+    }
+  }
+  

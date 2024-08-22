@@ -1,0 +1,28 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scroll-to-top .arrow-icon {
+    width: 30px; /* Adjust the size as needed */
+    height: auto;
+  }
+  
+  /* Make sure the scroll-to-top button is visible on mobile devices */
+  @media (max-width: 768px) {
+    .scroll-to-top {
+      bottom: 15px; /* Adjust positioning for smaller screens */
+      right: 15px;
+    }
+  
+    .scroll-to-top .arrow-icon {
+      width: 25px; /* Adjust icon size for mobile */
+    }
+  }
+  

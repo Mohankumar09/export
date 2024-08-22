@@ -1,0 +1,343 @@
+/* Base Styles (for larger screens) */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/social media icons/home bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .hero-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: slideInLeft 1s ease-out;
+    color: #4d8bc9;
+  }
+  
+  .hero-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: slideInRight 1s ease-out;
+    color: #e0e0e0;
+  }
+  
+  .btn-primary {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #ffcd00, #ffc107);
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.4s ease, transform 0.4s ease;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+    transform: scale(1.05);
+  }
+  
+  /* Featured Products Section */
+  .featured-products {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .featured-products::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 123, 255, 0.15);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 12s infinite;
+  }
+  
+  .featured-products h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    width: 300px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Aligns text in a vertical stack */
+    text-align: center;
+    justify-content: space-between; /* Spaces out content evenly */
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 60%; /* Adjusts image height */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+  }
+  
+  .product-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .product-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .product-card p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+  }
+  
+  /* Call-to-Action Section */
+  .cta-section {
+    padding: 50px 20px;
+    background: linear-gradient(45deg, #ff9800, #f6c636);
+    color: #1c1b1b;
+    text-align: center;
+    border-radius: 12px;
+    margin: 50px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .cta-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .cta-section .btn-primary {
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #fefeff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.4s ease, transform 0.4s ease;
+  }
+  
+  .cta-section .btn-primary:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.05);
+  }
+  
+  /* About Us Preview Section */
+  .about-us-preview {
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    border-radius: 15px;
+    margin: 50px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .about-us-preview::before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 152, 0, 0.15);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 12s infinite;
+  }
+  
+  .about-us-preview h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .about-us-preview p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .btn-secondary {
+    padding: 12px 24px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.4s ease, transform 0.4s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .hero-content {
+      padding: 20px;
+    }
+  
+    .hero-content h1 {
+      font-size: 32px;
+    }
+  
+    .hero-content p {
+      font-size: 18px;
+    }
+  
+    .btn-primary {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  
+    /* Featured Products Section */
+    .product-grid {
+      gap: 10px;
+    }
+  
+    .product-card {
+      width: 100%; /* Full width */
+      height: auto; /* Auto height */
+      margin-bottom: 20px; /* Add space between cards */
+    }
+  
+    .product-card img {
+      height: auto; /* Auto height */
+    }
+  
+    /* Call-to-Action Section */
+    .cta-section h2 {
+      font-size: 28px;
+    }
+  
+    .cta-section .btn-primary {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  
+    /* About Us Preview Section */
+    .about-us-preview h2 {
+      font-size: 28px;
+    }
+  
+    .about-us-preview p {
+      font-size: 16px;
+    }
+  
+    .btn-secondary {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Hero Section */
+    .hero-content h1 {
+      font-size: 24px;
+    }
+  
+    .hero-content p {
+      font-size: 16px;
+    }
+  
+    .btn-primary {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  
+    /* Call-to-Action Section */
+    .cta-section h2 {
+      font-size: 24px;
+    }
+  
+    .cta-section .btn-primary {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  
+    /* About Us Preview Section */
+    .about-us-preview h2 {
+      font-size: 24px;
+    }
+  
+    .about-us-preview p {
+      font-size: 14px;
+    }
+  
+    .btn-secondary {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  

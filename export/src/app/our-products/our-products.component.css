@@ -1,0 +1,113 @@
+.our-products {
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(177, 248, 224);
+  }
+  
+  .our-products h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #3592ef; /* Ensures the heading text stands out against the background */
+  }
+  
+  .our-products p {
+    font-size: 16px;
+    color: #b14848; /* Ensures the paragraph text stands out against the background */
+  }
+  
+  .product-category {
+    margin-bottom: 40px;
+  }
+  
+  .product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly softer shadow for better visibility */
+    transition: transform 0.3s;
+    color: #000000; /* Ensure text is readable on the white background */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures images cover the area and maintain aspect ratio */
+    border-radius: 10px; /* Matches the card's border radius */
+  }
+  
+  .card h4 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #000000; /* Darker text color for readability on white background */
+  }
+  
+  .cta {
+    margin-top: 30px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .our-products h2 {
+      font-size: 24px; /* Adjust font size for smaller screens */
+    }
+  
+    .our-products p {
+      font-size: 14px; /* Adjust font size for better readability on smaller screens */
+    }
+  
+    .product-cards {
+      gap: 10px;
+    }
+  
+    .card {
+      width: 150px; /* Adjust card width for smaller screens */
+      padding: 8px;
+    }
+  
+    .card img {
+      height: 120px; /* Adjust image height for smaller screens */
+    }
+  
+    .card h4 {
+      font-size: 16px; /* Adjust heading size for smaller screens */
+    }
+  
+    .card p {
+      font-size: 12px; /* Adjust paragraph size for smaller screens */
+    }
+  
+    .btn {
+      padding: 8px 16px; /* Adjust button padding for smaller screens */
+      font-size: 14px; /* Adjust font size for buttons */
+    }
+  }
+  

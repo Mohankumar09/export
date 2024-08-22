@@ -1,0 +1,124 @@
+.global-reach {
+    background-color: #d7e1f1;
+    padding: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .global-reach h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #37b3e8;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .global-reach p {
+    font-size: 18px;
+    color: #535353;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+  }
+  .country-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .country-card {
+    width: 150px;
+    padding: 20px;
+    background: #a3d9ec;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+  }
+  
+  .country-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .country-card img {
+    width: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .country-card h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  @media (max-width: 768px) {
+    .country-card {
+      width: 120px;
+    }
+  
+    .global-reach h2 {
+      font-size: 28px;
+    }
+  
+    .global-reach p {
+      font-size: 16px;
+    }
+  }
+
+  /* Mobile responsiveness */
+@media (max-width: 768px) {
+  .global-reach {
+    padding: 30px; /* Adjust padding for smaller screens */
+  }
+
+  .global-reach h2 {
+    font-size: 28px; /* Smaller heading size on mobile */
+  }
+
+  .global-reach p {
+    font-size: 16px; /* Smaller font size for paragraphs on mobile */
+  }
+
+  .country-card {
+    width: 120px; /* Adjust card width for smaller screens */
+    padding: 15px; /* Adjust padding inside cards */
+  }
+
+  .country-card img {
+    width: 50px; /* Adjust image size for smaller screens */
+  }
+
+  .country-card h3 {
+    font-size: 16px; /* Adjust font size for card headings */
+  }
+}
+
+@media (max-width: 480px) {
+  .global-reach {
+    padding: 20px; /* Further reduce padding for very small screens */
+  }
+
+  .global-reach h2 {
+    font-size: 24px; /* Further reduce heading size */
+  }
+
+  .global-reach p {
+    font-size: 14px; /* Further reduce paragraph font size */
+  }
+
+  .country-card {
+    width: 100px; /* Adjust card width for very small screens */
+    padding: 10px; /* Adjust padding inside cards */
+  }
+
+  .country-card img {
+    width: 40px; /* Adjust image size for very small screens */
+  }
+
+  .country-card h3 {
+    font-size: 14px; /* Adjust font size for card headings */
+  }
+}

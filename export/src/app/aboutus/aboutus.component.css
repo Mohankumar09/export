@@ -1,210 +1,210 @@
 .about-us {
-    padding: 50px;
-    background: linear-gradient(to bottom right, #e3f2fd, #fce4ec);
-    text-align: left;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 15px;
-    position: relative;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  padding: 50px;
+  background: linear-gradient(to bottom right, #e3f2fd, #fce4ec);
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-us:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-us h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #007bff;
+  display: inline-block;
+  padding-bottom: 10px;
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Standard property (won't work in most browsers) */
+}
+
+.mission, .products, .why-choose-us, .commitment, .contact {
+  padding: 30px;
+  margin: 30px 0;
+  background: linear-gradient(to right, #ffffff, #f8f9fa);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission:hover, .products:hover, .why-choose-us:hover, .commitment:hover, .contact:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mission::before, .products::before, .why-choose-us::before, .commitment::before, .contact::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.1));
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.mission:hover::before, .products:hover::before, .why-choose-us:hover::before, .commitment:hover::before, .contact:hover::before {
+  opacity: 1;
+}
+
+h2 {
+  font-size: 32px;
+  color: #007bff;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #007bff;
+  display: block;
+  margin-top: 10px;
+  transition: width 0.4s ease;
+}
+
+h2:hover::after {
+  width: 100px;
+}
+
+p, ul {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 40px;
+  padding-left: 0px;
+}
+
+li {
+  margin-bottom: 12px; /* Space between list items */
+  line-height: 1.8; /* Adjust line-height for better readability */
+  position: relative;
+  padding-left: 25px;
+}
+
+li::before {
+  content: '✔';
+  color: #007bff;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  transform: translateY(-2px);
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.4s ease;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  border-bottom: 2px solid #007bff;
+  color: #0056b3;
+}
+
+h2 {
+  font-size: 32px;
+  color: #444;
+  margin-bottom: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h2:hover {
+  color: #0056b3;
+  transform: translateY(-3px);
+}
+
+p, ul {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 15px; /* Space between list items */
+  line-height: 1.8; /* Adjust line-height for better readability */
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+  text-shadow: 0 2px 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .about-us {
+    padding: 20px;
+    margin: 0;
   }
-  
-  .about-us:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  }
-  
+
   .about-us h1 {
-    font-size: 48px;
-    color: #333;
-    margin-bottom: 30px;
+    font-size: 32px;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 3px solid #007bff;
-    display: inline-block;
-    padding-bottom: 10px;
-    background: linear-gradient(45deg, #007bff, #00c6ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text; /* Standard property (won't work in most browsers) */
   }
-  
+
   .mission, .products, .why-choose-us, .commitment, .contact {
-    padding: 30px;
-    margin: 30px 0;
-    background: linear-gradient(to right, #ffffff, #f8f9fa);
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    position: relative;
-    overflow: hidden;
+    padding: 20px;
+    margin: 15px 0;
   }
-  
-  .mission:hover, .products:hover, .why-choose-us:hover, .commitment:hover, .contact:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  .mission h2, .products h2, .why-choose-us h2, .commitment h2, .contact h2 {
+    font-size: 24px;
   }
-  
-  .mission::before, .products::before, .why-choose-us::before, .commitment::before, .contact::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.1));
-    transition: opacity 0.4s ease;
-    opacity: 0;
-  }
-  
-  .mission:hover::before, .products:hover::before, .why-choose-us:hover::before, .commitment:hover::before, .contact:hover::before {
-    opacity: 1;
-  }
-  
-  h2 {
-    font-size: 32px;
-    color: #007bff;
-    margin-bottom: 20px;
-    position: relative;
-    text-transform: uppercase;
-  }
-  
-  h2::after {
-    content: '';
-    width: 50px;
-    height: 3px;
-    background: #007bff;
-    display: block;
-    margin-top: 10px;
-    transition: width 0.4s ease;
-  }
-  
-  h2:hover::after {
-    width: 100px;
-  }
-  
+
   p, ul {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.8;
-    text-align: justify;
+    font-size: 16px;
   }
-  
+
   ul {
-    list-style-type: disc;
-    margin-left: 40px;
-    padding-left: 0px;
-  }
-  
-  li {
-    margin-bottom: 12px; /* Space between list items */
-    line-height: 1.8; /* Adjust line-height for better readability */
-    position: relative;
-    padding-left: 25px;
-  }
-  
-  li::before {
-    content: '✔';
-    color: #007bff;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 18px;
-    transform: translateY(-2px);
-  }
-  
-  a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.4s ease;
-    border-bottom: 2px solid transparent;
-  }
-  
-  a:hover {
-    border-bottom: 2px solid #007bff;
-    color: #0056b3;
-  }
-  
-  h2 {
-    font-size: 32px;
-    color: #444;
-    margin-bottom: 20px;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  h2:hover {
-    color: #0056b3;
-    transform: translateY(-3px);
-  }
-  
-  p, ul {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.8;
-  }
-  
-  ul {
-    list-style-type: disc;
     margin-left: 20px;
-    padding-left: 0;
   }
-  
+
   li {
-    margin-bottom: 15px; /* Space between list items */
-    line-height: 1.8; /* Adjust line-height for better readability */
+    font-size: 16px;
   }
-  
+
   a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-size: 16px;
   }
-  
-  a:hover {
-    text-decoration: underline;
-    color: #0056b3;
-    text-shadow: 0 2px 10px rgba(0, 123, 255, 0.5);
-  }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .about-us {
-      padding: 20px;
-      margin: 0;
-    }
-  
-    .about-us h1 {
-      font-size: 32px;
-      text-align: center;
-    }
-  
-    .mission, .products, .why-choose-us, .commitment, .contact {
-      padding: 20px;
-      margin: 15px 0;
-    }
-  
-    .mission h2, .products h2, .why-choose-us h2, .commitment h2, .contact h2 {
-      font-size: 24px;
-    }
-  
-    p, ul {
-      font-size: 16px;
-    }
-  
-    ul {
-      margin-left: 20px;
-    }
-  
-    li {
-      font-size: 16px;
-    }
-  
-    a {
-      font-size: 16px;
-    }
-  }
+}

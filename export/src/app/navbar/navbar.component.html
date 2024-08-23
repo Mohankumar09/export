@@ -1,19 +1,20 @@
 <nav class="navbar">
-    <div class="logo">
+  <div class="logo">
+    <a routerLink="/" class="logo-link">
       <img src="assets/social media icons/VAXFAB logo.png" alt="Company Logo">
       <span class="brand-name">VAXFAB</span>
-    </div>
-    <div class="menu-icon" id="menu-icon" (click)="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <ul class="nav-links" id="nav-links" [ngClass]="{'show': isMenuOpen}">
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/about-us">About Us</a></li>
-      <li><a routerLink="/our-products">Our Products</a></li>
-      <li><a routerLink="/services">Services</a></li>
-      <li><a routerLink="/contact-us">Contact Us</a></li>
-    </ul>
-  </nav>
-  
+    </a>
+  </div>
+  <div class="menu-icon" id="menu-icon" (click)="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul class="nav-links" id="nav-links" [ngClass]="{'show': isMenuOpen}">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/about-us">About Us</a></li>
+    <li><a routerLink="/our-products">Our Products</a></li>
+    <li><a routerLink="/services">Services</a></li>
+    <li><a routerLink="/contact-us">Contact Us</a></li>
+  </ul>
+</nav>

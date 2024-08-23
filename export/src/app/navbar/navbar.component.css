@@ -1,134 +1,135 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #54b8eb;
-    height: 50px;
-    font-family: 'Times New Roman', Times, serif;
-    margin-bottom: 10px;
-  }
-  
-  .brand-name {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    width: 80px;
-    height: auto;
-    margin-left: 8px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #54b8eb;
+  height: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+}
 
-  .logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit; /* Inherits the current color, ensuring that the brand name stays the same color */
-  }
+.brand-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+}
 
-  .logo-link:hover {
-    opacity: 0.8; /* Optional hover effect */
-  }
-  
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+  margin-right: 8px; /* Adjusted margin to the right for spacing */
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-link:hover {
+  opacity: 0.8; /* Slight opacity change on hover */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease; /* Added transition for color change */
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #fff; /* Changed underline color to white */
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f0f0f0; /* Changed hover color for better contrast */
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-links li {
-    position: relative;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    position: relative;
-    padding-bottom: 5px;
-  }
-  
-  .nav-links li a::after {
-    content: '';
     position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: rgb(25, 30, 24);
-    left: 0;
-    bottom: 0;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-links li a:hover {
-    color: rgb(5, 5, 5);
-  }
-  
-  .nav-links li a:hover::after {
-    width: 100%;
-  }
-  
-  .menu-icon {
-    display: none;
+    top: 80px; /* Adjusted to align with navbar height */
+    right: 0;
+    background-color: #54b8eb;
     flex-direction: column;
-    cursor: pointer;
-    padding: 5px;
+    width: 100%;
+    height: calc(100vh - 4px); /* Adjusted for proper alignment */
+    justify-content: center;
+    align-items: center;
+    display: none; /* Hide the menu by default */
+    z-index: 1000;
   }
-  
-  .menu-icon .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: all 0.3s ease;
+
+  .nav-links.show {
+    display: flex;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .nav-links {
-      position: absolute;
-      top: 80px;
-      right: 0;
-      background-color: #54b8eb;
-      flex-direction: column;
-      width: 100%;
-      height: calc(100vh - 4px);
-      justify-content: center;
-      align-items: center;
-      display: none; /* Hide the menu by default */
-      z-index: 1000;
-    }
-  
-    .nav-links.show {
-      display: flex;
-    }
-  
-    .nav-links li {
-      margin-bottom: 20px;
-    }
-  
-    .menu-icon {
-      display: flex;
-    }
+
+  .nav-links li {
+    margin-bottom: 20px;
   }
-  
-  /* Active state for the menu icon */
-  .menu-icon.active .bar:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+
+  .menu-icon {
+    display: flex;
   }
-  
-  .menu-icon.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .menu-icon.active .bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-  
+}
+
+/* Active state for the menu icon */
+.menu-icon.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}

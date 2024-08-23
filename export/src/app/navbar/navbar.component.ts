@@ -10,9 +10,15 @@ export class NavbarComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+
     const menuIcon = document.getElementById('menu-icon');
     if (menuIcon) {
       menuIcon.classList.toggle('active', this.isMenuOpen);
+    }
+
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks) {
+      navLinks.classList.toggle('show', this.isMenuOpen);
     }
   }
 }
